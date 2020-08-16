@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', 'sans serif';
+    font-size: 1.2rem;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    margin: 2%;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.grid-container > li {
+    display: contents;
+}
+
+.grid-container > .header span {
+    font-weight: bold;
+    text-align: center;
+    background-color: #0073EE;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.grid-container span {
+    padding: 10px 4px;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+/* Content li tags are not having id STARTS */
+/* .grid-container > li:not(.header) {
+    transition: background-color 0.5s ease-in;
+}
+
+li:not(.header):hover {
+    background-color: #CDF1F9;
+} */
+/* Content li tags are not having id ENDS */
+
+.content span {
+    transition: background-color 0.5s ease-in;
+}
+
+.content:hover span {
+    background-color: #CDF1F9;
+}
