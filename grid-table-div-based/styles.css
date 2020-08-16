@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 236, 236);
+    font-family: 'Calibri', 'sans serif';
+}
+
+section {
+    display: grid;
+    grid-template-columns: 15% 40% 20% 15% 10%;
+    max-width: 80%;
+    margin: 20px;
+    border: 1px solid red;
+    overflow: hidden;
+    /* row-gap: 5px; */
+    /* border-top: 1px solid blanchedalmond;
+    border-right: 1px solid blanchedalmond;
+    border-left: 1px solid blanchedalmond; */
+}
+
+section .header, section .body, section .body > div {
+    /* its used to remvove unncessary div from the grid container, 
+    only div's under header and body class will be treated as grid items */
+    display: contents;
+}
+
+section .header > div {
+    background-color: rgb(91, 91, 243);
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+/* section .body > div { */
+section .body div {
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 10px;
+}
+
+section .header > div:last-child, section .body div:last-child {
+    border-right: none;
+}
+
+section .body > div:last-child > div {
+    border-bottom: none;
+}
+
+/* section .body:nth-child(even) div {
+    background-color: #f8f6ff;
+} */
+
+.body {
+    transition: background-color 1s ease-in;
+    overflow-y: scroll;
+}
+
+.body > div:hover div {
+    background-color: gold;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 800px) {
+
+    section {
+        grid-template-columns: 100%;
+    }
+
+    /* section .body > div:last-child {
+        border-right: 1px solid red;
+    }*/
+
+    section .body div:last-child div {
+        border-bottom: 1px solid red;
+    } 
+
+}
